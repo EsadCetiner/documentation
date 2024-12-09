@@ -5,7 +5,7 @@ disableToc: false
 chapter: false
 ---
 
-> The Core Rule Set runs on WAF engines that are compatible with a subset of ModSecurity's SecLang configuration language. There are several options outside of ModSecurity itself, namely cloud offerings and content delivery network (CDN) services. There is also an open-source alternative to ModSecurity in the form of the new Coraza WAF engine.
+> CRS runs on WAF engines that are compatible with a subset of ModSecurity's SecLang configuration language. There are several options outside of ModSecurity itself, namely cloud offerings and content delivery network (CDN) services. There is also an open-source alternative to ModSecurity in the form of the new Coraza WAF engine.
 
 ## Compatible Free and Open-Source WAF Engines
 
@@ -17,11 +17,7 @@ ModSecurity 2.9.x passes 100% of the CRS unit tests on the Apache platform.
 
 When running ModSecurity, this is the option that is *practically guaranteed* to work with most documentation and know-how all around.
 
-ModSecurity is released under the Apache License 2.0. It is primarily developed by Spiderlabs, an entity within the company Trustwave. In summer 2021, Trustwave announced their plans to end development of ModSecurity in 2024. Attempts to convince Trustwave to hand over the project in the meantime, in the interests of guaranteeing the project's continuation, have failed. Trustwave have stated that they will not relinquish control of the project before 2024.
-
-As of this writing, there is no imminent need to leave the ModSecurity v2 platform, but such a step may become necessary in the future as the project's development stalls or new security problems can no longer be fixed. Despite these difficulties, the CRS community is confident it has the power and knowledge to provide ModSecurity patches if really needed.
-
-To learn more about the situation around ModSecurity, read [this CRS blog post](https://coreruleset.org/20211222/talking-about-modsecurity-and-the-new-coraza-waf/) discussing the matter.
+[ModSecurity](https://www.modsecurity.org) is released under the Apache License 2.0, and the project now lives under the OWASP Foundation umbrella.
 
 There is a [ModSecurity v2 / Apache Docker container](https://github.com/coreruleset/modsecurity-crs-docker) which is maintained by the CRS project.
 
@@ -43,7 +39,7 @@ There is a [ModSecurity v3 / Nginx Docker container](https://github.com/corerule
 
 ### Coraza
 
-The new [OWASP Coraza WAF](https://coraza.io/) is meant to provide an open-source alternative to the two ModSecurity release lines.
+[OWASP Coraza WAF](https://coraza.io/) is meant to provide an open-source alternative to the two ModSecurity release lines.
 
 Coraza passes 100% of the CRS v4 test suite and is thus *fully compatible with CRS*.
 
@@ -102,7 +98,7 @@ A selection of these platforms are listed below, along with links to get more in
 {{% notice note %}}
 AWS provides a rule set called the ["Core rule set (CRS) managed rule group"](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-baseline.html) which "…provides protection against… commonly occurring vulnerabilities described in OWASP publications such as OWASP Top 10."
 
-The CRS project does **not** believe that the AWS WAF "core rule set" is based on or related to the OWASP Core Rule Set.
+The CRS project does **not** believe that the AWS WAF "core rule set" is based on or related to OWASP CRS.
 {{% /notice %}}
 
 ### Cloudflare WAF
@@ -117,9 +113,7 @@ To learn more about Edgecast, read [their WAF documentation](https://docs.edgeca
 
 ### Fastly
 
-Fastly has offered CRS as part of their Fastly WAF for several years, but they have started to migrate their existing customers to the recently acquired Signal Sciences WAF. Interestingly, Fastly is transposing CRS rules into their own Varnish-based WAF engine.
-
-For more information about the Fastly CRS offering, read [their WAF documentation](https://docs.fastly.com/en/guides/fastly-waf-rule-set-updates-maintenance-legacy).
+Fastly has offered CRS as part of their Fastly WAF for several years, but they have started to migrate their existing customers to the recently acquired Signal Sciences WAF. Interestingly, Fastly is transposing CRS rules into their own Varnish-based WAF engine. Unfortunately, documentation on their legacy WAF offering has been removed.
 
 ### Google Cloud Armor
 
